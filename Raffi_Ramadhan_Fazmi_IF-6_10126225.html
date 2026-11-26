@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Kampus | Raffi Ramadhan Fazmi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #314768;
+      background-color: #f2f6fa;
+    }
+
+    header {
+      padding: 1.5rem 1rem;
+      color: #fff;
+      text-align: center;
+      background-color: #174a70;
+    }
+
+    header h1 {
+      margin: 0 0 0.75rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 1.5rem;
+      width: min(100% - 2rem, 1000px);
+      margin: 2rem auto;
+    }
+
+    section {
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgb(23 74 112 / 10%);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #174a70;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      border: 1px solid #cbd6e0;
+      text-align: left;
+    }
+
+    th {
+      color: #fff;
+      background-color: #246b8e;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    label,
+    legend {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      margin-top: 0.35rem;
+      padding: 0.65rem;
+      font: inherit;
+      border: 1px solid #aebdca;
+      border-radius: 5px;
+    }
+
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #aebdca;
+      border-radius: 5px;
+    }
+
+    fieldset label {
+      font-weight: normal;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    button {
+      padding: 0.7rem 1.1rem;
+      color: #fff;
+      font: inherit;
+      font-weight: bold;
+      background-color: #174a70;
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="reset"] {
+      color: #233044;
+      background-color: #dce5ec;
+    }
+
+    button:hover {
+      background-color: #0e3451;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #c4d2dd;
+    }
+
+    footer {
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+      background-color: #174a70;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Perpustakaan Kampus</h1>
+    <nav aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#jadwal">Jadwal Layanan</a>
+      <a href="#pendaftaran">Pendaftaran</a>
+    </nav>
+  </header>
+
+  <main id="beranda">
+    <section id="jadwal">
+      <h2>Jadwal Layanan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Hari</th>
+            <th scope="col">Jam Layanan</th>
+            <th scope="col">Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senin–Jumat</td>
+            <td>08.00–16.00</td>
+            <td>Layanan umum</td>
+          </tr>
+          <tr>
+            <td>Sabtu</td>
+            <td>09.00–13.00</td>
+            <td>Layanan akhir pekan</td>
+          </tr>
+          <tr>
+            <td>Minggu</td>
+            <td>Tutup</td>
+            <td>Perpustakaan tidak beroperasi</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pendaftaran">
+      <h2>Formulir Keanggotaan</h2>
+      <form action="#" method="post">
+        <label for="nama">Nama lengkap</label>
+        <input type="text" id="nama" name="nama" autocomplete="name" required>
+
+        <label for="email">Alamat email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <fieldset>
+          <legend>Jenis kelamin</legend>
+          <label><input type="radio" name="jenis_kelamin" value="laki-laki" required> Laki-laki</label>
+          <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+        </fieldset>
+
+        <label for="kelas">Kelas</label>
+        <select id="kelas" name="kelas" required>
+          <option value="">-- Pilih kelas --</option>
+          <option value="IF-6">IF-6</option>
+          <option value="IF-5">IF-5</option>
+          <option value="IF-4">IF-4</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+
+        <label for="catatan">Catatan</label>
+        <textarea id="catatan" name="catatan" rows="4" placeholder="Tulis catatan jika ada"></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Kirim</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Raffi Ramadhan Fazmi | Kelas IF-6 | NIM 10126225</p>
+  </footer>
+</body>
+</html>
