@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perpustakaan Kampus | Raffi Ramadhan Fazmi</title>
+  <title>Perpustakaan Kampus</title>
   <style>
     * {
       box-sizing: border-box;
@@ -46,14 +46,17 @@
     }
 
     main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 1.5rem;
-      width: min(100% - 2rem, 1000px);
+      width: 90%;
+      max-width: 1000px;
       margin: 2rem auto;
     }
 
     section {
+      flex: 1 1 320px;
+      min-width: 0;
       padding: 1.5rem;
       background-color: #fff;
       border-radius: 10px;
@@ -83,7 +86,8 @@
     }
 
     form {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
     }
 
@@ -224,6 +228,9 @@
           <option value="IF-6">IF-6</option>
           <option value="IF-5">IF-5</option>
           <option value="IF-4">IF-4</option>
+          <option value="IF-3">IF-3</option>
+          <option value="IF-2">IF-2</option>
+          <option value="IF-2">IF-1</option>
           <option value="lainnya">Lainnya</option>
         </select>
 
@@ -239,7 +246,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Raffi Ramadhan Fazmi | Kelas IF-6 | NIM 10126225</p>
+    <p>&copy; Raffi Ramadhan Fazmi | IF-6 | 10126225</p>
   </footer>
 </body>
 </html>
